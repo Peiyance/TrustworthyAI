@@ -1,0 +1,32 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster.k8s.local
+  region: us-east-2
+  version: "1.29"
+  tags:
+    guardai: eks-cluster
+vpc:
+  id: "vpc-99d8b3f2"
+  cidr: "172.31.0.0/16"
+  nat:
+    gateway: Disable
+  subnets:
+    private:
+      us-east-2a:
+        id: "subnet-64d6440f" 
+      us-east-2b:
+        id: "subnet-d9ca02a4" 
+managedNodeGroups:
+  - name: ng-1
+    instanceType: c5.large
+    desiredCapacity: 5
+    volumeSize: 10
+    minSize: 5
+    maxSize: 5
+    availabilityZones:
+      - us-east-2a
+    privateNetworking: true # Set to true if you want the node group to use private subnets only
+    tags:
+      guardai: eks-cluster

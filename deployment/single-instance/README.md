@@ -1,0 +1,2 @@
+# Provision
+Run `terraform apply`
