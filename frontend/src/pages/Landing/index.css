@@ -1,0 +1,42 @@
+.landing-page {
+  background-image: url('./../../images/landing/landing-banner.webp'); /* Replace with your image path */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-shade {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark shade over the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.button-group-demo {
+  display: flex; 
+  flex-direction: column;
+}
+
+.button-demo {
+  margin-bottom: 10px;
+}
